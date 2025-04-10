@@ -1,0 +1,162 @@
+/* MAIN */
+.main {
+  flex: 1 auto;
+  box-shadow: var(--shadow);
+  border-radius: 2rem;
+  padding: 2rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUT TEXT */
+.todos-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 2rem 1rem;
+  position: relative;
+}
+
+.todos-entry input {
+  box-shadow: var(--inner-shadow);
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  border: none;
+  width: 40%;
+  height: 2rem;
+  font-size: 1.4rem;
+  background: none;
+  transition: all 0.5s ease;
+  color: var(--primary-light);
+  font-weight: 200;
+}
+
+.todos-entry input:focus {
+  outline: none;
+  caret-color: var(--primary-dark);
+  box-shadow: var(--shadow);
+  width: 75%;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.todos-entry input::placeholder {
+  color: var(--greyLight-3);
+  font-style: italic;
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+}
+
+/* INPUT BUTTON */
+.todos-enter {
+  font-size: 1.8rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--primary);
+  width: 4rem;
+  height: 2rem;
+  border: 0.2rem solid;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 3%;
+}
+
+/* INPUT PROMPT */
+.todos-alert {
+  position: static;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* LIST ITEMS */
+.todos-ul {
+  height: 400px;
+  overflow: scroll;
+  list-style-type: none;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.todos-ul li {
+  padding: 0.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  box-shadow: var(--inner-shadow);
+  border-radius: 1rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.todos-ul li::after {
+  content: "";
+  display: block;
+  width: 50%;
+  margin: auto;
+  border-bottom: 0.25rem solid var(--greyDark);
+  padding-top: 0.5rem;
+}
+
+.todos-ul li:hover {
+  color: var(--primary-dark);
+  filter: brightness(125%);
+  transform: scale(0.98) translateX(0.1rem);
+}
+
+.todos-ul li .list-text {
+  padding: 0 4rem;
+  text-align: justify;
+}
+
+.todos-ul li .list-text::first-letter {
+  padding-left: 1rem;
+  text-transform: capitalize;
+}
+
+/* LIST ITEM CHECK */
+.todos-ul li p.checked {
+  text-decoration: line-through;
+  color: var(--greyDark);
+}
+
+.todos-ul li p.checked::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  height: 1.3rem;
+  width: 1.3rem;
+  color: var(--primary-dark);
+  border: 0.03rem solid var(--primary-dark);
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  left: 2.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* LIST REMOVE */
+.todos-ul li .list-cross {
+  position: absolute;
+  display: inline-block;
+  right: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.3rem;
+  height: 2.3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-dark);
+  border: 0.2rem solid var(--primary-dark);
+  border-radius: 50%;
+}
+
+.todos-ul li .list-cross:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}

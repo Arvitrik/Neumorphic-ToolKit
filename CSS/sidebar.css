@@ -1,0 +1,211 @@
+/* SideBar */
+.sidebar {
+  flex: 1 0 300px;
+  box-shadow: var(--shadow);
+  border-radius: 2rem;
+  padding: 1rem;
+  width: calc(0.3 * var(--view-width));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* DISPLAY DATA */
+.display-info {
+  height: 45%;
+  width: 100%;
+  min-width: 9rem;
+  background: var(--greyLight-1);
+  border-radius: 15%;
+  box-shadow: var(--inner-shadow);
+  padding: 1rem;
+}
+
+/* BUTTONS  */
+.btns-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.btns {
+  width: 85%;
+}
+
+.btn-item {
+  box-shadow: var(--outer-shadow);
+  background: var(--greyLight-1);
+  color: var(--primary);
+  border: none;
+  font-size: 1.2rem;
+  width: 100%;
+  min-width: 9rem;
+  height: 3rem;
+  margin: 0.25rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: 0.2rem solid var(--primary-light);
+}
+
+.btn-item:hover {
+  filter: brightness(110%);
+  transform: scale(1.1);
+}
+
+.btn-item:active,
+.btn-item:focus {
+  box-shadow: var(--inner-shadow);
+  width: 99%;
+  font-size: 1.3rem;
+}
+
+/* DISPLAY DATA */
+.display-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* DATE */
+.date-time {
+  animation: fadeAway 10s forwards 20s 1;
+}
+
+.date-disp:nth-of-type(even) {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+/* DATE + CURRENCY RATE */
+.date-disp,
+.currency-group {
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 0.3rem;
+  flex: 1 0 auto;
+}
+
+/* CURRENCY RATE */
+.currency-group:hover {
+  font-size: 1.5rem;
+}
+.currency-group .currency-symbol {
+  padding-left: 0.3rem;
+}
+
+/* POMODORA */
+.pomodora-selection {
+  min-height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
+
+.pomodora-selection .pomodora-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  color: var(--primary);
+  background-color: var(--greyLight-1);
+  padding: 0.25rem 0.5rem;
+}
+
+.pomodora-selection input[type="number"] {
+  appearance: textfield;
+  height: 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background: var(--greyLight-1);
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+.pomodora-selection input[type="number"]::-webkit-inner-spin-button,
+.pomodora-selection input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.pomodora-selection input[type="number"]:focus {
+  outline: none;
+}
+
+.pomodora-output {
+  box-shadow: var(--outer-shadow);
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+}
+
+.pomodora-btn-grp {
+  min-height: 40%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pomodora-btn-grp a i {
+  cursor: pointer;
+}
+
+/* WEATHER */
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-info,
+.weather-symb,
+.weather-details {
+  display: flex;
+  width: 100%;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+}
+
+.weather-symb {
+  align-items: center;
+  padding: 0 0.5rem;
+  justify-content: space-around;
+}
+
+.weather-info {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.weather-details {
+  flex-direction: column;
+  align-items: center;
+}

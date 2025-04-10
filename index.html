@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAwesome 6.3 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Neumorphic Productivity Toolkit</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="logo popup-effect">Daily Productivity Toolkit</h3>
+        <div class="quotes-container scrollBar-hide popup-effect">
+          <p class="quote-text" id="quote-text"></p>
+          <p class="quote-text-author" id="quote-text-author"></p>
+        </div>
+      </div>
+      <div class="container-content">
+        <main class="main">
+          <form id="todos-form" class="wrapper">
+            <div class="todos-entry">
+              <input
+                type="text"
+                id="todos-input"
+                name="todos-input"
+                placeholder="What needs to be done?"
+              />
+              <a class="todos-enter" id="todos-enter">
+                <i class="fa-solid fa-right-long"></i>
+              </a>
+            </div>
+            <p class="todos-alert" id="todos-alert"></p>
+            <div class="todos-list">
+              <ul
+                id="todos-ul"
+                class="todos-ul scrollBar-hide popup-effect"
+              ></ul>
+            </div>
+          </form>
+        </main>
+        <sidebar class="sidebar">
+          <div id="display-info" class="display-info"></div>
+          <div class="btns-group">
+            <div class="btns btn-1">
+              <button id="display-date" class="btn-item btn-date">Date</button>
+            </div>
+            <div class="btns btn-2">
+              <button id="btn-weather" class="btn-item btn-weather">
+                Weather
+              </button>
+            </div>
+            <div class="btns btn-3">
+              <button id="btn-pomodora" class="btn-item btn-pomodora">
+                Pomodora
+              </button>
+            </div>
+            <div class="btns btn-4">
+              <button id="btn-exchange" class="btn-item btn-exchange">
+                Exchange Rate
+              </button>
+            </div>
+          </div>
+        </sidebar>
+      </div>
+    </div>
+    <script type="text/javascript" src="config.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
